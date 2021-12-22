@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Beginner</title>
     <style>
         body {
@@ -12,26 +10,27 @@
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <img src="image.logo.png" width="80">
-        <h1>What iS Vue.js</h1>
-    </header>
-    <div id="app"></div>
+    <div id="app">
+        <header>
+            <img src="image.logo.png" width="80">
+            <h1>{{ name }}</h1>
+        </header>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+    <script>
+        const member = {
+            // string, number, bollean, array, object
+            name: "mukhamad Fadil",
+            pesan: "hello World!"
+        }
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
-<script>
-    const member = {
-        // string, number, bollean, array, object
-        name: "mukhamad Fadil",
-        pesan: "hello World!"
-    } 
-
-    const vn = new Vue({
-        el: "#app",
-        data: member
-    })
-</script>
+        const vn = new Vue({
+            el: '#app',
+            data: member
+        })
+    </script>
 </body>
+
 </html>
